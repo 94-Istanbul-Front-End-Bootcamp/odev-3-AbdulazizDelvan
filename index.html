@@ -8,28 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <title>Form Validation Ödev</title>
 </head>
-
 <body>
-    <form action="POST" id="form1" novalidate>
+    <form action="POST" id="form1" name="myForm" onsubmit>
         <h1>FORM VALIDATION ODEVI</h1>
         <div class="form-body">
             <div>
                 <label for="userName">Kullanıcı Adı :</label>
-                <input type="text" placeholder="Kullanıcı Adı" required>
+                <input type="text" placeholder="Kullanıcı Adı" id="adi" required>
+                <span class="error" id="te" style="display:none">Lütfen Bu Alanı Doldurun</span>
             </div>
             <div>
-                <label for="password">Parola :</label>
-                <input type="password" placeholder="Şifre" required>
+                <label for="password">password:</label>
+                <input type="password" placeholder="Şifre" id="sf" required>
+                <span class="error" id="tex" style="display:none">Lütfen Bu Alanı Doldurun</span>
             </div>
             <div>
                 <label for="eMail">E-Mail :</label>
-                <input type="email" placeholder="E-mail" required>
+                <input type="email" placeholder="E-mail" id="eMail" required>
+                <span class="error"  id="te2" style="display:none">Lütfen Bu Alanı Doldurun</span>
             </div>
             <div>
-                <input type="checkbox" required>
+                <input type="checkbox" id="check"   required>
+                <span class="error" id="te3" style="display:none">Lütfen Bu Alanı Doldurun</span>
             </div>
             <div>
-                <button>Gönder</button>
+                <button onclick="errorFonction()">Gönder</button>
             </div>
         </div>
     </form>
