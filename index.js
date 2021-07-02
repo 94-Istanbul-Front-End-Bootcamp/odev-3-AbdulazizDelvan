@@ -15,8 +15,8 @@ function errorFonction(){
         } else {
             tex.style.display = "none";
         }
-        let z=document.getElementById("eMail").validity.valueMissing;
-        if(z==true){
+        let z=document.getElementById("eMail").validity.valid;
+        if(z==false){
             te2.style.display = "block";
         } else {
             te2.style.display = "none";
